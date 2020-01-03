@@ -135,6 +135,7 @@ class StickerPackLoader {
     }
 
     static byte[] fetchStickerAsset(@NonNull final String identifier, @NonNull final String name, ContentResolver contentResolver) throws IOException {
+//        Uri uri =
         try (final InputStream inputStream = contentResolver.openInputStream(getStickerAssetUri(identifier, name));
              final ByteArrayOutputStream buffer = new ByteArrayOutputStream()) {
             if (inputStream == null) {

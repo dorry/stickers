@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="160dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/typeImage"
+        android:layout_width="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/tray_cuppy" />
+
+    <TextView
+        android:layout_below="@id/typeImage"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/typeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cuppy"
+        android:textSize="24dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
