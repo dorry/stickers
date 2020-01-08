@@ -50,8 +50,8 @@ public class AssetsDownloaderActivity extends AppCompatActivity {
         String id = i.getStringExtra("id");
 
         try {
-            isPackDownloadFinished = downloadPacks(id);
             isContentDownloadFinished = downloadContents(id);
+            isPackDownloadFinished = downloadPacks(id);
         }
         catch (Exception e){
             Log.d("sdf", "exception: "+e.toString());
@@ -65,7 +65,7 @@ public class AssetsDownloaderActivity extends AppCompatActivity {
 
     public String createAssetsFolder(){
         String path = getCacheDir() + "/Assets1/";
-        storage.createDirectory(path, false);
+        storage.createDirectory(path, true);
         return path;
     }
 
@@ -97,7 +97,7 @@ public class AssetsDownloaderActivity extends AppCompatActivity {
 //                    storage.createFile(Packpath+"/"+pack.getTray_image_file(),pack.getPack_logo());
                     downloadStickers(pack);
                 }
-                downloadContents(id);
+//                downloadContents(id);
             }
 
             @Override

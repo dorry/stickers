@@ -88,6 +88,7 @@ public class StickerContentProvider extends ContentProvider {
     }
 
     public void loadData() {
+        stickerPackList = null;
         final String authority = BuildConfig.CONTENT_PROVIDER_AUTHORITY;
         if (!authority.startsWith(Objects.requireNonNull(getContext()).getPackageName())) {
             throw new IllegalStateException("your authority (" + authority + ") for the content provider should start with your package name: " + getContext().getPackageName());
